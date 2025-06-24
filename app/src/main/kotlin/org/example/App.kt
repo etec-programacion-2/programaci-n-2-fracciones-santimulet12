@@ -4,6 +4,11 @@
 package org.example
 
 fun main() {
-    val miFraccion = Fraccion()
+    val miFraccion = Fraccion(1,2)
     miFraccion.mostrar()
+
+    val miFraccion2 = Fraccion(1,3)
+
+    println(miFraccion.plus(miFraccion2))
+
 }

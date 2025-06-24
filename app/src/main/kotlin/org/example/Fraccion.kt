@@ -23,4 +23,12 @@ class Fraccion(numerador: Int = 0, denominador: Int = 1) { //Colocamos valores p
     fun mostrar(){
         println(toString())
     }
+
+    operator fun plus(otra: Fraccion): Fraccion{
+        // (a/b) + (c/d) = (ad + bc)/(b*d)
+        val nuevoNumerador: Int = (this.numerador * otra.denominador) + (this.denominador * otra.numerador)
+        val nuevoDenominador = this.denominador * otra.denominador
+
+        return Fraccion(nuevoNumerador, nuevoDenominador)
+    }
 }
