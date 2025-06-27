@@ -3,18 +3,20 @@
 - Herramienta: Claude
 - Prompt: algoritmo de euclides en Kotlin
 - Respuesta: 
+```kotlin
 fun mcd(a: Int, b: Int): Int {
-  var num1 = kotlin.math.abs(a)
-  var num2 = kotlin.math.abs(b)
-
-  while (num2 != 0) {
-  val temp = num2
-  num2 = num1 % num2
-  num1 = temp
-  }
-
-  return num1
-  }
+    var num1 = kotlin.math.abs(a)
+    var num2 = kotlin.math.abs(b)
+    
+    while (num2 != 0) {
+        val temp = num2
+        num2 = num1 % num2
+        num1 = temp
+    }
+    
+    return num1
+}
+```
 
 ### Prompt 2
 - Fecha: 2025-06-27
