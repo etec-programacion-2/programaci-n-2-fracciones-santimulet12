@@ -4,11 +4,13 @@
 package org.example
 
 fun main() {
-    val miFraccion = Fraccion(1,2)
-    miFraccion.mostrar()
+    val miFraccion = Fraccion(-5,6) //Creo un objeto miFraccion
+    miFraccion.mostrar() //Muestro el objeto
 
-    val miFraccion2 = Fraccion(1,3)
+    val miFraccion2 = Fraccion(-6,12)
+    miFraccion2.mostrar()
 
-    println(miFraccion.plus(miFraccion2))
+    println("${miFraccion} + ${miFraccion2} = ${miFraccion + miFraccion2}") //Suma dos numeros de la clase fraccion
+    println("${miFraccion} + ${miFraccion2} = ${miFraccion - miFraccion2}") //Resta dos numeros de la clase fraccion
 
 }
