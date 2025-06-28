@@ -11,6 +11,13 @@ fun main() {
     miFraccion2.mostrar()
 
     println("${miFraccion} + ${miFraccion2} = ${miFraccion + miFraccion2}") //Suma dos numeros de la clase fraccion
-    println("${miFraccion} + ${miFraccion2} = ${miFraccion - miFraccion2}") //Resta dos numeros de la clase fraccion
+    println("${miFraccion} - ${miFraccion2} = ${miFraccion - miFraccion2}") //Resta dos numeros de la clase fraccion
 
+    val unCuarto = Fraccion(1,4)
+    println(unCuarto)
+
+    val tresDoceavos = Fraccion(3,12)
+    println(tresDoceavos)
+
+    println("${unCuarto} * ${tresDoceavos} = ${unCuarto * tresDoceavos}")
 }

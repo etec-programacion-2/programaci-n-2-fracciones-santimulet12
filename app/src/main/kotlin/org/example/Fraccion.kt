@@ -41,6 +41,22 @@ class Fraccion(
 
         return simplificar(nuevoNumerador, nuevoDenominador)
     }
+
+    operator fun times(otra: Fraccion): Fraccion{
+        //(a/b) * (c/d) = (ac)/(bd)
+        val nuevoNumerador: Int = this.numerador * otra.numerador
+        val nuevoDenominador: Int = this.denominador * otra.denominador
+
+        return simplificar(nuevoNumerador,nuevoDenominador)
+    }
+
+    operator fun div(otra: Fraccion): Fraccion{
+        //(a/b) / (c/d) = (ad)/(bc)
+        val nuevoNumerador: Int = this.numerador * otra.denominador
+        val nuevoDenominador: Int = this.denominador * otra.numerador
+
+        return simplificar(nuevoNumerador,nuevoDenominador)
+    }
     //-----------------------------------------------Métodos privados-----------------------------------------------------
 
     private fun simplificar(num: Int, denom: Int): Fraccion{
