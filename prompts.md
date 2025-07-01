@@ -113,3 +113,17 @@ fun main() {
     println("MCD(48, 18) = $resultado") // Imprime: MCD(48, 18) = 6
 }
 ```
+
+### Prompt 3
+- Fecha: 2025-07-01
+- Herramienta: Claude
+- Prompt: que es companion object
+- Respuesta:
+
+Es un objeto especial que pertenece a la clase en sí, no a las instancias individuales de la clase. Esto significa que:
+
+No necesitas crear un objeto de la clase para usar sus métodos
+
+Hay solo una instancia del companion object por clase
+
+Es la forma de Kotlin de tener "métodos estáticos"

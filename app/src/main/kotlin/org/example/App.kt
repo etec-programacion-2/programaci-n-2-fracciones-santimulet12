@@ -20,4 +20,10 @@ fun main() {
     println(tresDoceavos)
 
     println("${unCuarto} * ${tresDoceavos} = ${unCuarto * tresDoceavos}")
+    println(unCuarto == tresDoceavos)
+
+    println(unCuarto.esMayor(tresDoceavos))
+
+    val fraccionDesde125 = Fraccion.desdeDecimal(1.25)
+    println("1.25 como fracción: $fraccionDesde125")
 }
