@@ -144,27 +144,27 @@ class Fraccion(
          */
         fun desdeDecimal(decimal: Double): Fraccion {
             // Casos especiales
-            if (decimal == 0.0) return Fraccion(0, 1)
-            if (decimal.isInfinite() || decimal.isNaN()) {
+            if (decimal == 0.0) return Fraccion(0, 1) // Si el decimal es 0.0
+            if (decimal.isInfinite() || decimal.isNaN()) { // Si el parametro es infinito o NaN
                 throw IllegalArgumentException("No se puede convertir un valor infinito o NaN a fracción")
             }
 
             // Determinar el signo
-            val esNegativo = decimal < 0
-            val valorAbsoluto = kotlin.math.abs(decimal)
+            val esNegativo = decimal < 0 // True o False
+            val valorAbsoluto = kotlin.math.abs(decimal) //Toma el valor absoluto del decimal
 
             // Convertir la parte decimal a fracción
-            val cadenaDecimal = valorAbsoluto.toString()
-            val partes = cadenaDecimal.split(".")
+            val cadenaDecimal = valorAbsoluto.toString() //Convierte Double a Str
+            val partes = cadenaDecimal.split(".") //Divide el Str en dos, tomando como delimitador "."
 
-            if (partes.size == 1) {
+            if (partes.size == 1) { //Si partes es de tamaño 1, significa que es un numero entero
                 // Es un número entero
                 return Fraccion(decimal.toInt(), 1)
             }
 
-            val parteDecimal = partes[1]
-            var denominador = 1
-            repeat(parteDecimal.length) {
+            val parteDecimal = partes[1] //Toma la parte decimal del Double
+            var denominador = 1 //Designa valor 1 al denominador
+            repeat(parteDecimal.length) { //Multiplica el denominador por 10, una cantidad de veces determinada por el largo del decimal (25 -> 2)
                 denominador *= 10
             }
             val numerador = (valorAbsoluto * denominador).toInt()

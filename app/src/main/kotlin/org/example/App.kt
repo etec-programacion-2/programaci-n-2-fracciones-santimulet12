@@ -14,16 +14,17 @@ fun main() {
     println("${miFraccion} - ${miFraccion2} = ${miFraccion - miFraccion2}") //Resta dos numeros de la clase fraccion
 
     val unCuarto = Fraccion(1,4)
-    println(unCuarto)
+    println(unCuarto) //1/4
 
     val tresDoceavos = Fraccion(3,12)
-    println(tresDoceavos)
+    println(tresDoceavos) //3/12
 
-    println("${unCuarto} * ${tresDoceavos} = ${unCuarto * tresDoceavos}")
-    println(unCuarto == tresDoceavos)
+    println("${unCuarto} * ${tresDoceavos} = ${unCuarto * tresDoceavos}") //1/16
+    println(unCuarto == tresDoceavos) //true
 
-    println(unCuarto.esMayor(tresDoceavos))
+    println(unCuarto.esMayor(tresDoceavos)) //false
 
-    val fraccionDesde125 = Fraccion.desdeDecimal(1.25)
-    println("1.25 como fracción: $fraccionDesde125")
+    val fraccionDesde1025 = Fraccion.desdeDecimal(10.25)
+    println("10.25 como fracción: $fraccionDesde1025") //41/4
+
 }
