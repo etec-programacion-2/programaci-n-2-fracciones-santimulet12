@@ -3,6 +3,37 @@
  */
 package org.example
 
+import java.util.Scanner
+
 fun main() {
-    println("Hola app!")
+    val calculadora = CalculadoraFracciones()
+    val scanner = Scanner(System.`in`)
+    var opcion: Int
+
+    do {
+        calculadora.mostrarMenu()
+
+        opcion = scanner.nextInt()
+
+        when (opcion) {
+            1 -> calculadora.realizarSuma(scanner)
+            2 -> calculadora.realizarResta(scanner)
+            3 -> calculadora.realizarMultiplicacion(scanner)
+            4 -> calculadora.realizarDivision(scanner)
+            5 -> calculadora.realizarComparacion(scanner)
+            6 -> calculadora.convertirADecimal(scanner)
+            7 -> calculadora.crearDesdeDecimal(scanner)
+            8 -> calculadora.mostrarEjemplos()
+            0 -> println("¡Hasta luego!")
+            else -> println("Opción inválida. Intente de nuevo.")
+        }
+
+        if (opcion != 0) {
+            println("\nPresione Enter para continuar...")
+            scanner.nextLine() // Limpiar buffer
+            scanner.nextLine() // Esperar Enter
+        }
+    } while (opcion != 0)
+
+    scanner.close()
 }

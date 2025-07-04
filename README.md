@@ -6,9 +6,9 @@
 
 ## Información del Alumno
 
-**Nombre y Apellido:** [Escribir aquí tu nombre y apellido]
+**Nombre y Apellido:** **Santiago Mulet**
 
-**Curso:** [Escribir aquí tu curso]
+**Curso:** [4to Informática]
 
 **Fecha de entrega:** [Escribir aquí la fecha de entrega]
 
