@@ -3,28 +3,37 @@
  */
 package org.example
 
+import java.util.Scanner
+
 fun main() {
-    val miFraccion = Fraccion(-5,6) //Creo un objeto miFraccion
-    miFraccion.mostrar() //Muestro el objeto
+    val calculadora = CalculadoraFracciones()
+    val scanner = Scanner(System.`in`)
+    var opcion: Int
 
-    val miFraccion2 = Fraccion(-6,12)
-    miFraccion2.mostrar()
+    do {
+        calculadora.mostrarMenu()
 
-    println("${miFraccion} + ${miFraccion2} = ${miFraccion + miFraccion2}") //Suma dos numeros de la clase fraccion
-    println("${miFraccion} - ${miFraccion2} = ${miFraccion - miFraccion2}") //Resta dos numeros de la clase fraccion
+        opcion = scanner.nextInt()
 
-    val unCuarto = Fraccion(1,4)
-    println(unCuarto) //1/4
+        when (opcion) {
+            1 -> calculadora.realizarSuma(scanner)
+            2 -> calculadora.realizarResta(scanner)
+            3 -> calculadora.realizarMultiplicacion(scanner)
+            4 -> calculadora.realizarDivision(scanner)
+            5 -> calculadora.realizarComparacion(scanner)
+            6 -> calculadora.convertirADecimal(scanner)
+            7 -> calculadora.crearDesdeDecimal(scanner)
+            8 -> calculadora.mostrarEjemplos()
+            0 -> println("¡Hasta luego!")
+            else -> println("Opción inválida. Intente de nuevo.")
+        }
 
-    val tresDoceavos = Fraccion(3,12)
-    println(tresDoceavos) //3/12
+        if (opcion != 0) {
+            println("\nPresione Enter para continuar...")
+            scanner.nextLine() // Limpiar buffer
+            scanner.nextLine() // Esperar Enter
+        }
+    } while (opcion != 0)
 
-    println("${unCuarto} * ${tresDoceavos} = ${unCuarto * tresDoceavos}") //1/16
-    println(unCuarto == tresDoceavos) //true
-
-    println(unCuarto.esMayor(tresDoceavos)) //false
-
-    val fraccionDesde1025 = Fraccion.desdeDecimal(10.25)
-    println("10.25 como fracción: $fraccionDesde1025") //41/4
-
+    scanner.close()
 }
