@@ -47,47 +47,55 @@ class CalculadoraFracciones {
         val frac1= leerFraccion(scanner, "Ingrese los valores para la Fracción 1")
         val frac2 = leerFraccion(scanner, "Ingrese los valores para la Fracción 2")
 
-        println(frac1 + frac2)
+        println("$frac1 + $frac2 = ${frac1 + frac2}")
     }
 
     fun realizarResta(scanner: Scanner){
         val frac1= leerFraccion(scanner, "Ingrese los valores para la Fracción 1")
         val frac2 = leerFraccion(scanner, "Ingrese los valores para la Fracción 2")
 
-        println(frac1 - frac2)
+        println("$frac1 - $frac2 = ${frac1 - frac2}")
     }
 
     fun realizarMultiplicacion(scanner: Scanner){
         val frac1= leerFraccion(scanner, "Ingrese los valores para la Fracción 1")
         val frac2 = leerFraccion(scanner, "Ingrese los valores para la Fracción 2")
 
-        println( frac1 * frac2)
+        println("$frac1 * $frac2 = ${frac1 * frac2}")
     }
 
     fun realizarDivision(scanner: Scanner){
         val frac1= leerFraccion(scanner, "Ingrese los valores para la Fracción 1")
         val frac2 = leerFraccion(scanner, "Ingrese los valores para la Fracción 2")
 
-        println(frac1 / frac2)
+        println("$frac1 / $frac2 = ${frac1 / frac2}")
     }
 
     fun realizarComparacion(scanner: Scanner){
         val frac1= leerFraccion(scanner, "Ingrese los valores para la Fracción 1")
         val frac2 = leerFraccion(scanner, "Ingrese los valores para la Fracción 2")
 
-        println(frac1 > frac2)
+        if(frac1 > frac2){
+            println("$frac1 es mayor que $frac2")
+        }
+        else if (frac1 < frac2){
+            println("$frac1 es menor que $frac2")
+        }
+        else{
+            println("$frac1 es igual que $frac2")
+        }
     }
 
     fun convertirADecimal(scanner: Scanner){
         val frac1= leerFraccion(scanner, "Ingrese los valores para la Fracción")
 
-        println(frac1.aDecimal())
+        println("$frac1 en decimal es ${frac1.aDecimal()}")
     }
 
     fun crearDesdeDecimal(scanner: Scanner){
         println("Ingrese un decimal: ")
         val numero = scanner.nextDouble()
 
-        println(Fraccion.desdeDecimal(numero))
+        println("$numero en fracción es ${Fraccion.desdeDecimal(numero)}")
     }
 }
